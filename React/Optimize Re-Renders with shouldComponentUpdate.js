@@ -2,7 +2,8 @@ class OnlyEvens extends React.Component {
   constructor(props) {
     super(props);
   }
-
+ 
+  //then 2nd it will be called
   shouldComponentUpdate(nextProps, nextState) {
     console.log('Should I update?');
     // Change code below this line
@@ -14,6 +15,13 @@ class OnlyEvens extends React.Component {
     // Change code above this line
   }
 
+  //this will be called first while receiving props
+  componentWillReceiveProps(nextProps) {
+    console.log('Receiving new props...' + nextProps.value);
+  }
+ 
+  //if 2nd called lifecycle method returns true
+  //then this method will be called
   componentDidUpdate() {
     console.log('Component re-rendered.');
   }
