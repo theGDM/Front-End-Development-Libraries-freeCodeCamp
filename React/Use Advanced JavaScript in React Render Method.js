@@ -14,7 +14,7 @@ class MagicEightBall extends React.Component {
     this.ask = this.ask.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
-  
+
   ask() {
     if (this.state.userInput) {
       this.setState({
@@ -54,7 +54,7 @@ class MagicEightBall extends React.Component {
       'Very doubtful'
     ];
 
-    const answer = 'change me!'; // Change this line
+    const answer = possibleAnswers[this.state.randomIndex]; // Change this line
     return (
       <div>
         <input
@@ -69,7 +69,7 @@ class MagicEightBall extends React.Component {
         <h3>Answer:</h3>
         <p>
           {/* Change code below this line */}
-          {possibleAnswers[this.state.randomIndex]}
+          {answer}
           {/* Change code above this line */}
         </p>
       </div>
