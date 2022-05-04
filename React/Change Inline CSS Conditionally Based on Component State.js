@@ -15,11 +15,13 @@ class GateKeeper extends React.Component {
 
   render() {
     let inputStyle = {
+      outline : "auto",
       border: '1px solid black'
     };
     // Change code below this line
     if(this.state.input.length > 15){
       inputStyle = {
+        outline :"none",
         border: '3px solid red'
       };
     }
