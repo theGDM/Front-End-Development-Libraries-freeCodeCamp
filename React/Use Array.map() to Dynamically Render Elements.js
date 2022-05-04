@@ -18,7 +18,8 @@ class MyToDoList extends React.Component {
   handleSubmit() {
     const itemsArray = this.state.userInput.split(',');
     this.setState({
-      toDoList: itemsArray
+      toDoList: itemsArray,
+      userInput : ''
     });
   }
   handleChange(e) {
