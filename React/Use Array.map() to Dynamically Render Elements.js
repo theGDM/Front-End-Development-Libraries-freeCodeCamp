@@ -18,8 +18,7 @@ class MyToDoList extends React.Component {
   handleSubmit() {
     const itemsArray = this.state.userInput.split(',');
     this.setState({
-      toDoList: itemsArray,
-      userInput : ''
+      toDoList: itemsArray
     });
   }
   handleChange(e) {
@@ -44,7 +43,7 @@ class MyToDoList extends React.Component {
         <br />
         <button onClick={this.handleSubmit}>Create List</button>
         <h1>My "To Do" List:</h1>
-        <ul>{items}</ul>
+        {this.state.toDoList[0] != '' && <ul>{items}</ul>}
       </div>
     );
   }
